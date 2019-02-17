@@ -39,8 +39,9 @@ To change this template use File | Settings | File Templates.
         </td>
     </tr>
 
-    <jsp:useBean id="meals" scope="request" type="java.util.List"/>
     <c:forEach var="meal" items="${meals}">
+        <jsp:useBean id="meal" scope="request" type="ru.javawebinar.topjava.model.MealTo"/>
+
         <tr class=${meal.excess ? 'red' : 'green'}>
             <td>
                     ${meal.dateTime.toLocalDate()} ${meal.dateTime.toLocalTime()}
